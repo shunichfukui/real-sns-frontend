@@ -3,7 +3,45 @@ import "./Rightbar.css"
 
 function Rightbar() {
   return (
-    <div className='rightbar'>Rightbar</div>
+    <div className='rightbar'>
+      <div className="rightbarWrapper">
+        <div className="eventContainer">
+          <img src="assets/star.png" alt="" className='starImg' />
+          <span className="eventText">
+            <b>フォロワー限定</b>イベント開催中
+          </span>
+        </div>
+        <img src="assets/event.jpeg" alt="" className='eventImg' />
+        <h4 className='rightbarTitle'>オンライン中の友達</h4>
+        <ul className="rightbarFriendList">
+          <li className="rightbarFried">
+            <div className="rightbarProfileImgContainer">
+              <img src="assets/person/1.jpeg" alt="" className='rightbarProfileImg' />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">
+              Shunich code
+            </span>
+          </li>
+          <li className="rightbarFried">
+            <div className="rightbarProfileImgContainer">
+              <img src="assets/person/2.jpeg" alt="" className='rightbarProfileImg' />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">
+              Tom code
+            </span>
+          </li>
+        </ul>
+        <p className="promotionTitle">プロモーション広告</p>
+        <img src="assets/promotion/promotion1.jpeg" alt="" className='rightbarPromotionImg' />
+        <p className='promotionName'>ショッピング</p>
+        <img src="assets/promotion/promotion2.jpeg" alt="" className='rightbarPromotionImg' />
+        <p className='promotionName'>カーショップ</p>
+        <img src="assets/promotion/promotion3.jpeg" alt="" className='rightbarPromotionImg' />
+        <p className='promotionName'>新高度株式会社</p>
+      </div>
+    </div>
   )
 }
 
