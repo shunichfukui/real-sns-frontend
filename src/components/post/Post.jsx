@@ -1,16 +1,17 @@
 import { MoreVert } from '@mui/icons-material'
 import React from 'react'
 import "./Post.css"
+import { Users } from '../../dummyData';
 
-export default function Post() {
+export default function Post({ post }) {
   return (
     <div className='post'>
       <div className="postWrapper">
           <div className="postTop">
               <div className="postTopLeft">
-                <img src="./assets/person/1.jpeg" alt="" className='postProfileImg' />
-                <span className="postUsername">Shin Code</span>
-                <span className="postDate">五分前</span>
+                <img src={Users.filter((user) => user.id === post.id)[0].profilePicture} alt="" className='postProfileImg' />
+                <span className="postUsername">{Users.filter((user) => user.id === post.id)[0].username}</span>
+                <span className="postDate">{post.date}</span>
               </div>
             <div className="postTopRight">
                 <MoreVert />
@@ -19,19 +20,19 @@ export default function Post() {
       </div>
       {/* 投稿内容 */}
       <div className="postCenter">
-          <span className="postText">snsを自作中</span>
-          <img src="./assets/post/1.jpeg" alt="" className='postImg' />
+          <span className="postText">{post.desc}</span>
+          <img src={post.photo} alt="" className='postImg' />
       </div>
       <div className="postBottom">
           <div className="postBottomLeft">
               <img src="./assets/heart.png" alt="" className='likeIcon' />
               <span className="postLikeCounter">
-                  5人がいいねを押しました
+                  {post.like}人がいいねを押しました
               </span>
           </div>
           <div className="postBottomRight">
               <span className="postCommentText">
-                  3: コメント
+                  {post.comment}: コメント
               </span>
           </div>
       </div>
