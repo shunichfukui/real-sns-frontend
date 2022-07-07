@@ -1,9 +1,17 @@
 import { MoreVert } from '@mui/icons-material'
-import React from 'react'
+import React, { useState } from 'react'
 import "./Post.css"
 import { Users } from '../../dummyData';
 
 export default function Post({ post }) {
+  const [likeCount, setLikeCount] = useState(post.like);
+  const [isLiked, setIsLiked] = useState(false);
+
+  const changeLikeCount = () => {
+    setLikeCount(isLiked ? likeCount -1 : likeCount +1);
+    setIsLiked(!isLiked);
+  }
+
   return (
     <div className='post'>
       <div className="postWrapper">
@@ -25,9 +33,9 @@ export default function Post({ post }) {
       </div>
       <div className="postBottom">
           <div className="postBottomLeft">
-              <img src="./assets/heart.png" alt="" className='likeIcon' />
+              <img src="./assets/heart.png" alt="" className='likeIcon' onClick={() => changeLikeCount()} />
               <span className="postLikeCounter">
-                  {post.like}人がいいねを押しました
+                  {likeCount}人がいいねを押しました
               </span>
           </div>
           <div className="postBottomRight">
