@@ -11,13 +11,14 @@ export default function Post({ post }) {
     setLikeCount(isLiked ? likeCount -1 : likeCount +1);
     setIsLiked(!isLiked);
   }
+  const PUBLIC_FOLDER = process.env.REACT_APP_PUBLIC_FOLDER;
 
   return (
     <div className='post'>
       <div className="postWrapper">
           <div className="postTop">
               <div className="postTopLeft">
-                <img src={Users.filter((user) => user.id === post.id)[0].profilePicture} alt="" className='postProfileImg' />
+                <img src={PUBLIC_FOLDER + Users.filter((user) => user.id === post.id)[0].profilePicture} alt="" className='postProfileImg' />
                 <span className="postUsername">{Users.filter((user) => user.id === post.id)[0].username}</span>
                 <span className="postDate">{post.date}</span>
               </div>
@@ -33,7 +34,7 @@ export default function Post({ post }) {
       </div>
       <div className="postBottom">
           <div className="postBottomLeft">
-              <img src="./assets/heart.png" alt="" className='likeIcon' onClick={() => changeLikeCount()} />
+              <img src={PUBLIC_FOLDER + "/heart.png"} alt="" className='likeIcon' onClick={() => changeLikeCount()} />
               <span className="postLikeCounter">
                   {likeCount}人がいいねを押しました
               </span>
