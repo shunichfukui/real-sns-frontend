@@ -15,7 +15,11 @@ function Timeline({ userId }) {
         ? await axios.get(`/posts/profile/${userId}`)
         : await axios.get(`/posts/timeline/${user._id}`);
 
-      setPosts(response["data"])
+      setPosts(
+        response["data"].sort((post1, post2) => {
+          return new Date(post2.createdAt) - new Date(post1.createdAt);
+        })
+      )
     };
     fetchPosts();
   }, [userId, user._id]);
