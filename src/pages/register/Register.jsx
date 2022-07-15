@@ -11,6 +11,10 @@ export default function Register() {
 
   const navigate = useNavigate();
 
+  const gotoLoginPage = () => {
+    navigate("/login");
+  }
+
   const handleSubmit = async (e) => {
       e.preventDefault();
       // パスワードと確認用のパスワードがあっているか確認
@@ -47,7 +51,7 @@ export default function Register() {
                     <input type="password" className='registerInput' required ref={password} placeholder='パスワード' minLength="6" />
                     <input type="password" className='registerInput' required ref={passwordConfirmation} placeholder='確認用パスワード' minLength="6" />
                     <button className="registerButton" type='submit'>サインアップ</button>
-                    <button className="loginRegisterButton">ログイン</button>
+                    <button className="loginRegisterButton" onClick={gotoLoginPage}>ログイン</button>
                 </form>
             </div>
         </div>
