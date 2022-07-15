@@ -11,7 +11,7 @@ export default function Home() {
       <Topbar />
       <div className="homeContainer">
         <Sidebar />
-        <Timeline />
+        <Timeline userId={'62c50465667ade1f92cb5b03'} />
         <Rightbar />
       </div>
     </>

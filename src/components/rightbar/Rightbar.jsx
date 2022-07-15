@@ -3,7 +3,7 @@ import "./Rightbar.css"
 import { Users } from '../../dummyData';
 import OnlineFriend from '../online_friend/OnlineFriend';
 
-function Rightbar({ type }) {
+function Rightbar({ user }) {
   const PUBLIC_FOLDER = process.env.REACT_APP_PUBLIC_FOLDER;
 
   const HomeRightBar = () => {
@@ -69,7 +69,7 @@ function Rightbar({ type }) {
   return (
     <div className='rightbar'>
       <div className="rightbarWrapper">
-        {type === "profile" ? <ProfileRightBar /> : <HomeRightBar />}
+        {user ? <ProfileRightBar /> : <HomeRightBar />}
       </div>
     </div>
   );
