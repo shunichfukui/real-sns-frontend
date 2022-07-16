@@ -1,6 +1,6 @@
 # real-sns
 
-snsサービスの基盤 フロント側
+練習用 snsサービスの基盤 フロント側
 
 サーバーのリポジトリ
 https://github.com/shunichfukui/real-sns
