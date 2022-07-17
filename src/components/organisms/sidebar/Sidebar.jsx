@@ -1,8 +1,8 @@
 import { Bookmark, Home, MessageRounded, Notifications, Person, Search, Settings } from '@mui/icons-material'
 import React from 'react'
 import "./Sidebar.css"
-import { Users } from '../../dummyData';
-import CloseFriend from '../close_friend/CloseFriend';
+import { Users } from '../../../dummyData';
+import CloseFriend from '../../atoms/close_friend/CloseFriend';
 import { Link } from 'react-router-dom';
 
 function Sidebar() {

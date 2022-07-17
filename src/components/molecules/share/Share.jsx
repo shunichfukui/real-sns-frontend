@@ -1,7 +1,7 @@
 import { Analytics, Face, Gif, Image } from '@mui/icons-material';
 import axios from 'axios';
 import React, { useContext, useRef, useState } from 'react';
-import { AuthContext } from '../../state/AuthContext';
+import { AuthContext } from '../../../state/AuthContext';
 import "./Share.css";
 
 function Share() {

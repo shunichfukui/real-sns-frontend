@@ -1,9 +1,9 @@
 import React from 'react'
+import Sidebar from '../../components/organisms/sidebar/Sidebar'
+import Topbar from '../../components/organisms/topbar/Topbar'
+import Timeline from '../../components/organisms/timeline/Timeline';
+import Rightbar from '../../components/organisms/rightbar/Rightbar';
 import "./Home.css"
-import Topbar from '../../components/topbar/Topbar';
-import Sidebar from '../../components/sidebar/Sidebar';
-import Timeline from '../../components/timeline/Timeline';
-import Rightbar from '../../components/rightbar/Rightbar';
 
 export default function Home() {
   return (

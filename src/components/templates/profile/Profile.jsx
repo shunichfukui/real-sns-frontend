@@ -3,7 +3,7 @@ import "./Profile.css"
 import axios from 'axios';
 import Topbar from '../../components/topbar/Topbar';
 import Sidebar from '../../components/sidebar/Sidebar';
-import Timeline from '../../components/timeline/Timeline';
+import Timeline from '../../organisms/timeline/Timeline';
 import Rightbar from '../../components/rightbar/Rightbar';
 import { useParams } from "react-router-dom";
 

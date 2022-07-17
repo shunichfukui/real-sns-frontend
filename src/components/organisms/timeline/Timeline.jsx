@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
 import "./Timeline.css";
-import Share from '../share/Share';
+import Share from '../../molecules/share/Share';
 import Post from '../post/Post';
 import axios from 'axios';
-import { AuthContext } from '../../state/AuthContext';
+import { AuthContext } from '../../../state/AuthContext';
 
 function Timeline({ userId }) {
   const [posts, setPosts] = useState([]);

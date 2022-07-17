@@ -1,7 +1,7 @@
 import { Chat, Notifications, Search } from '@mui/icons-material'
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../../state/AuthContext';
+import { AuthContext } from '../../../state/AuthContext';
 import "./Topbar.css";
 
 export default function Topbar() {

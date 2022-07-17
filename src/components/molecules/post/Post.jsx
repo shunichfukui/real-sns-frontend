@@ -2,7 +2,7 @@ import { MoreVert } from '@mui/icons-material'
 import axios from 'axios';
 import React, { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../../state/AuthContext';
+import { AuthContext } from '../../../state/AuthContext';
 // import { format } from 'timeago.js';
 import "./Post.css"
 
